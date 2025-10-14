@@ -49,29 +49,28 @@ A full-stack Flask + PostgreSQL web app designed to connect blood donors and rec
 
 ## 📂 Project Structure
   
-LifeLink - Blood Donation Management System/      
-│── app.py                # Main Flask app  
-|
-├── templates/            # HTML templates  
+LifeLink - Blood Donation Management System/
+│── app.py                  # Main Flask app
+│
+├── templates/              # HTML templates  
+│   ├── home.html  
+│   ├── donor.html  
+│   ├── recipient.html  
+│   ├── search.html  
 │   ├── about.html  
 │   ├── contact.html  
-│   ├── donor.html  
-|   ├── faq.html
-│   ├── home.html  
-│   ├── recipient.html
-│   └── search.html  
-|
-├── static/               # Static files  
+│   └── faq.html  
+│
+├── static/                 # Static files  
 │   ├── css/  
-│   |    └── about.css  
-│   |    └── contact.css  
-│   |    └── donor.css 
-|   |    └── faq.css
-│   |    └── home.css  
-│   |    └── recipient.css  
-│   |    └── search.css  
-│   └── assets/  
-│        └── (project images)  
+│   │   ├── home.css  
+│   │   ├── donor.css  
+│   │   ├── recipient.css  
+│   │   ├── search.css  
+│   │   ├── about.css  
+│   │   ├── contact.css  
+│   │   └── faq.css  
+│   └── assets/             # Images   
 
 ---
 
@@ -99,6 +98,4 @@ LifeLink - Blood Donation Management System/
 
    ```bash
    flask run
-   ``` 
-
-5. Open your browser and visit 👉 http://127.0.0.1:5000   
+   ```   
