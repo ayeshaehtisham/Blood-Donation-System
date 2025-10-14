@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Blood | LifeLink</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/search.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">🩸 LifeLink</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/donor">Donor</a>
+      <a href="/recipient">Recipient</a>
+      <a href="/search" class="active">Search</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="/faq">FAQs</a>
+    </nav>
+  </header>
+
+  <section class="search-hero">
+    <h1>Find Hope Near You</h1>
+    <p>Because finding help should never feel impossible.</p>
+  </section>
+
+  <section class="search-box">
+    <form method="POST" action="/search">
+      <select name="blood_group" required>
+        <option value="">Select Blood Group</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+      </select>
+
+      <input type="text" name="city" placeholder="Enter City..." required>
+      <button type="submit">Search</button>
+    </form>
+  </section>
+
+    {% if matched %}
+  <section class="results">
+    {% if donors %}
+      <h2>Matching Donors Found for Your Request!</h2>
+      <div class="cards">
+        {% for donor in donors %}
+        <div class="card">
+          <h3>{{ donor[1] }}</h3>
+          <p><b>Blood Group:</b> {{ donor[2] }}</p>
+          <p><b>Age:</b> {{ donor[3] }}</p>
+          <p><b>City:</b> {{ donor[5] }}</p>
+          <p><b>Contact:</b> {{ donor[4] }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <h3 class="no-results">No donors found for this request. 💔</h3>
+    {% endif %}
+  </section>
+  {% elif searched %}
+
+  <section class="results">
+    {% if donors %}
+      <h2>Available Donors</h2>
+      <div class="cards">
+        {% for donor in donors %}
+        <div class="card">
+          <h3>{{ donor[1] }}</h3>
+          <p><b>Blood Group:</b> {{ donor[2] }}</p>
+          <p><b>Age:</b> {{ donor[3] }}</p>
+          <p><b>City:</b> {{ donor[5] }}</p>
+          <p><b>Contact:</b> {{ donor[4] }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <h3 class="no-results">No donors found. 💔</h3>
+    {% endif %}
+  </section>
+  {% endif %}
+
+  {% if scroll_to_results %}
+  <script>
+    window.onload = () => {
+      const resultsSection = document.querySelector(".results");
+      if (resultsSection) {
+        resultsSection.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+  </script>
+  {% endif %}
+
+  <footer>
+    <p>© 2025 LifeLink | When no one's listening, we are ❤️</p>
+  </footer>
+</body>
+</html>

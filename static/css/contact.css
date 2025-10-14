@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #fff, #ffeaea);
+  color: #333;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #D72638;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+  color: #D72638;
+}
+
+/* Hero */
+.contact-hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: url('../assets/contact.png') center/cover no-repeat;
+  color: white;
+}
+
+.contact-hero h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.contact-hero p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #fffbe8;
+}
+
+/* Form Section */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 60px 20px;
+}
+
+form {
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 350px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+form h2 {
+  color: #D72638;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input, textarea {
+  width: 94%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #f7f7f7;
+  font-family: 'Poppins';
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(215,38,56,0.3);
+}
+
+button {
+  width: 100%;
+  background: #D72638;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #b91d2e;
+  transform: translateY(-2px);
+}
+
+/* Contact Info */
+.contact-info {
+  max-width: 350px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.contact-info h2 {
+  color: #D72638;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.quote {
+  font-style: italic;
+  color: #b91d2e;
+  margin-top: 20px;
+  border-left: 3px solid #D72638;
+  padding-left: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #D72638;
+  color: white;
+  font-size: 14px;
+}

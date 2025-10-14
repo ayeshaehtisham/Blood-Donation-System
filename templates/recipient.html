@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Need Blood | LifeLink</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/recipient.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">🩸 LifeLink</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/donor">Donor</a>
+      <a href="/recipient" class="active">Recipient</a>
+      <a href="/search">Search</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="/faq">FAQs</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Need Blood – Request for Hope</h1>
+    <p class="quote">“Your request could save a life. Every drop matters.”</p>
+
+    <form method="POST" action="/recipient" class="glass-form">
+      <div class="input-group">
+        <label>Patient Name</label>
+        <input type="text" name="patient_name" placeholder="Enter patient's full name" required>
+      </div>
+
+      <div class="input-group">
+        <label>Required Blood Group</label>
+        <select name="blood_group" required>
+          <option value="">Select</option>
+          <option>O+</option><option>O-</option>
+          <option>A+</option><option>A-</option>
+          <option>B+</option><option>B-</option>
+          <option>AB+</option><option>AB-</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label>Hospital Name</label>
+        <input type="text" name="hospital" placeholder="Enter hospital name (we will match it)" required>
+      </div>
+
+      <div class="input-group">
+        <label>City</label>
+        <input type="text" name="city" placeholder="Enter your city" required>
+      </div>
+
+      <div class="input-group">
+        <label>Contact Number</label>
+        <input type="text" name="contact" placeholder="Enter contact number" required>
+      </div>
+
+      <button type="submit" class="btn">Send Request</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 LifeLink | When no one's listening, we are ❤️</p>
+  </footer>
+</body>
+</html>

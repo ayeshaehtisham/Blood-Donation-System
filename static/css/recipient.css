@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #ffe6e6, #ffffff);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #D72638;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+nav a:hover, nav a.active {
+  color: #D72638;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 28px;
+  color: #D72638;
+}
+
+.quote {
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
+}
+
+.glass-form {
+  background: rgba(255, 255, 255, 0.7);
+  width: 400px;
+  margin: 40px auto;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* 🔥 Animated Blood-Themed Gradient Border */
+.glass-form {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.glass-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+  padding: 3px;
+
+  background: linear-gradient(
+    90deg,
+    #ff0033,
+    #ff5e5e,
+    #b30000,
+    #ff0033
+  );
+  background-size: 300% 300%;
+  animation: moveBorder 3s linear infinite;
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+@keyframes moveBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #444;
+}
+
+input, select, textarea {
+  width: 95%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  resize: none;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #D72638;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #a31d2c;
+  transform: scale(1.03);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #D72638;
+  color: white;
+  margin-top: 40px;
+  font-size: 14px;
+}

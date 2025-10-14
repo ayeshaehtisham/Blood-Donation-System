@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeLink - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="logo">🩸 LifeLink</div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/donor">Donor</a>
+            <a href="/recipient">Recipient</a>
+            <a href="/search">Search</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/faq">FAQs</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Link Hearts. Donate Life</h1>
+            <div class="buttons">
+                <a href="/donor" class="btn donate">Donate</a>
+                <a href="/recipient" class="btn request">Request</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro">
+        <h2>Welcome to LifeLink</h2>
+        <p> <b>LifeLink</b> is a digital blood donation system that connects blood donors, recipients, and hospitals. 
+        Our mission is to ensure a safe and efficient blood supply for those in need.</p>
+    </section>
+
+    <section class="stats-section">
+       <!-- Stat Container 1: Lives Saved -->
+        <div class="stats-container">
+            <i class="fas fa-heartbeat stat-icon"></i>
+            <div class="stat-content">
+                <!-- Data is stored in data-val; initial number is 0 -->
+                <span class="stat-number data-count" data-val="1200">0</span>
+                <span class="stat-label">Lives Saved</span>
+            </div>
+        </div>
+        
+        <!-- Stat Container 2: Donors Registered -->
+        <div class="stats-container">
+            <i class="fas fa-hand-holding-heart stat-icon"></i>
+            <div class="stat-content">
+                <!-- Data is stored in data-val; initial number is 0 -->
+                <span class="stat-number data-count" data-val="3000">0</span>
+                <span class="stat-label">Donors Registered</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Carousel) -->
+    <section class="testimonial-section">
+        <h2>Hear From Our Heroes and Hopefuls</h2>
+        
+        <div class="testimonial-slider">
+            <div class="slider-track">
+                
+                <!-- Testimonial 1 (The Real Card) -->
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="quote">"LifeLink connected me with a donor in less than 40 minutes when my sister needed an emergency transfusion. This system is a true lifesaver."</p>
+                    <p class="author">— Maria D., Grateful Sister</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="quote">"The sign-up was so easy, and the location finder was perfect. It felt amazing to know I made a direct impact in my local community."</p>
+                    <p class="author">— David K., Registered Donor</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="quote">"As a coordinator, LifeLink drastically cut down our search time for rare blood types. It’s an invaluable tool for hospital staff."</p>
+                    <p class="author">— Dr. Elena R., Health Coordinator</p>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="quote">"I was so scared, but seeing how fast the donation came through gave me incredible peace. Thank you, LifeLink."</p>
+                    <p class="author">— Jessica P., Recent Recipient</p>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="quote">"I donate regularly, and this platform makes scheduling and tracking my impact so simple. Highly recommend every donor sign up here."</p>
+                    <p class="author">— Alex T., Dedicated Donor</p>
+                </div>
+
+                <!-- Testimonial 6 (The Real Last Card) -->
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="quote">"It was my first time donating. The clear instructions and emotional support from the LifeLink community made all the difference."</p>
+                    <p class="author">— Sam W., First-Time Donor</p>
+                </div>
+
+                <!-- CLONE of Testimonial 1 - This enables the smooth loop -->
+                <div class="testimonial-card clone">
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="quote">"LifeLink connected me with a donor in less than 40 minutes when my sister needed an emergency transfusion. This system is a true lifesaver."</p>
+                    <p class="author">— Maria D., Grateful Sister</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+       <p>© 2025 LifeLink | When no one's listening, we are ❤️</p>
+    </footer>
+
+    <script>
+    // Get all elements with the class 'data-count' that hold the numbers
+      const statNumbers = document.querySelectorAll('.data-count');
+
+    // Options for the Intersection Observer
+    const observerOptions = {
+        root: null, // relative to the viewport
+        rootMargin: '0px', // no margin
+        threshold: 0.5 // trigger when 50% of the element is visible
+    };
+
+    // Function to handle the counting animation
+    const startCount = (targetElement, duration = 2000) => {
+        // Get the final target value from the 'data-val' attribute
+        const finalValue = parseInt(targetElement.getAttribute('data-val'));
+        let startValue = 0;
+        
+        // Calculate the time needed for each step (count up quickly)
+        const stepTime = Math.abs(Math.floor(duration / finalValue));
+        
+        const counter = setInterval(() => {
+            startValue += 10; // Increment by 10 for a fast, dynamic count
+            
+            // Stop the counter if the current value exceeds the final value
+            if (startValue >= finalValue) {
+                startValue = finalValue;
+                clearInterval(counter);
+                // Add the '+' sign back to the final display
+                targetElement.textContent = startValue.toLocaleString() + "+"; 
+                return;
+            }
+
+            // Update the text content
+            targetElement.textContent = startValue.toLocaleString();
+        }, stepTime);
+    };
+
+    // Intersection Observer Callback
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            // Check if the element is currently intersecting (visible)
+            if (entry.isIntersecting) {
+                const element = entry.target;
+                
+                // Call the animation function
+                startCount(element);
+                
+                // Stop observing this element once the animation has started
+                observer.unobserve(element);
+            }
+        });
+    };
+
+    // Create the Intersection Observer instance
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Attach the observer to all counter elements
+    statNumbers.forEach(number => {
+        observer.observe(number);
+        // Set initial text content to 0 before animation starts, plus the '+' symbol
+        // We remove the '+' during the counting process and add it back at the end
+        number.textContent = '0+'; 
+    });
+
+    // --- Testimonial Carousel Continuous Loop Logic ---
+        const track = document.querySelector('.slider-track');
+        const testimonialSlider = document.querySelector('.testimonial-slider');
+        // We only care about the 6 real cards for counting purposes
+        const totalRealCards = document.querySelectorAll('.testimonial-card:not(.clone)').length; 
+        let currentIndex = 0; // Starts at 0 (Card 1)
+        const slideInterval = 5000; 
+
+        const moveSlider = () => {
+            const cardWidth = testimonialSlider.offsetWidth;
+            
+            // 1. Advance the index for the next slide (0 -> 6)
+            currentIndex++;
+
+            // 2. Apply the smooth transition to the next card (or the clone at index 6)
+            let translationValue = -currentIndex * cardWidth;
+            track.style.transition = 'transform 0.8s ease-in-out'; // Re-enable transition
+            track.style.transform = `translateX(${translationValue}px)`;
+            
+            // 3. Check if we've moved onto the cloned card (index 6, which is totalRealCards)
+            if (currentIndex > totalRealCards - 1) {
+                
+                // 4. Set a short timeout (must be slightly longer than the CSS transition duration)
+                setTimeout(() => {
+                    // Reset index to 0 (real Card 1)
+                    currentIndex = 0; 
+                    
+                    // Reset transition to 0s for an instant, invisible snap-back
+                    track.style.transition = 'transform 0s'; 
+                    
+                    // Snap back to the beginning position (real Card 1)
+                    track.style.transform = `translateX(0px)`;
+                }, 800); // 800ms matches the 0.8s CSS transition duration
+            }
+        };
+
+        // Start the automatic sliding timer
+        setInterval(moveSlider, slideInterval);
+    </script>
+    
+</body>
+</html>

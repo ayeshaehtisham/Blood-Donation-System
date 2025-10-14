@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | LifeLink</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="logo">🩸 LifeLink</div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/donor">Donor</a>
+        <a href="/recipient">Recipient</a>
+        <a href="/search">Search</a>
+        <a href="/about">About</a>
+        <a href="/contact" class="active">Contact</a>
+        <a href="/faq">FAQs</a>
+      </nav>
+    </header>
+
+    <section class="contact-hero">
+      <div class="hero-text">
+        <h1>Reach Out To Us</h1>
+        <p>When no one’s listening, we are.  
+        Send us your message — we’ll always respond with care.</p>
+      </div>
+    </section>
+
+    <section class="contact-container">
+      <form method="POST" action="/contact">
+        <h2>Send a Message</h2>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>📍 Karachi, Pakistan</p>
+        <p>📞 +92 321 4567890</p>
+        <p>📧 support@lifelink.org</p>
+        <p class="quote">“Because every message can save a life.”</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 LifeLink | When no one's listening, we are ❤️</p>
+    </footer>
+  </body>
+</html>

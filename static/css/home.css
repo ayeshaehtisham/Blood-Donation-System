@@ -1,0 +1,234 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #fff, #ffeaea);
+    color: #333;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #D72638;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #D72638;
+}
+
+/* Hero Section */
+.hero {
+    height: 88vh;
+    background: url('../assets/hero.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.3);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.buttons .btn {
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 18px;
+    margin: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn.donate {
+    background: #D72638;
+    color: white;
+    box-shadow: 0 4px 10px rgba(215, 38, 56, 0.4);
+}
+
+.btn.donate:hover {
+    background: #b31c2a; 
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 15px rgba(215, 38, 56, 0.9); 
+}
+
+.btn.request {
+    border: 2px solid #D72638;
+    color: #D72638;
+    background: white;
+}
+
+.btn.request:hover {
+    background: #D72638;
+    color: white;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.intro h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #D72638;
+}
+
+.intro p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* --- Stats Section --- */
+.stats-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between the two containers */
+    padding: 60px 20px;
+}
+
+.stats-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px; /* Controls the maximum width of the box */
+    padding: 30px;
+    background: #ffffff; /* White background for the box */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stats-container:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.stat-icon {
+    font-size: 3.5rem; /* Large icon size */
+    color: #D72638; /* My brand - red color */
+    margin-right: 20px;
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.stat-number {
+    /* Remember: The initial number will be 0 before the JS runs */
+    font-size: 2.5rem; /* Large, bold number */
+    font-weight: 700;
+    color: #333; /* Dark color for high contrast */
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 1.1rem; /* Clear label text */
+    font-weight: 500;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- Testimonials Section (Carousel) --- */
+        .testimonial-section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .testimonial-section h2 {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 50px;
+        }
+
+        .testimonial-section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #D72638; 
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .testimonial-slider {
+            max-width: 600px; 
+            margin: 0 auto;
+            overflow: hidden; 
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider-track {
+            display: flex; 
+            /* Track now holds 7 items (6 real + 1 clone) */
+            width: calc(600px * 7); 
+            transition: transform 0.8s ease-in-out; 
+        }
+
+        .testimonial-card {
+            flex-shrink: 0; 
+            width: 600px; 
+            background: #fff;
+            padding: 40px;
+            text-align: left;
+            border-top: 5px solid #D72638; 
+            box-sizing: border-box; 
+        }
+
+        .rating { color: gold; margin-bottom: 15px; font-size: 1.1em; }
+        .quote { font-size: 1.1em; line-height: 1.6; color: #444; margin-bottom: 15px; font-style: italic; min-height: 80px; }
+        .author { font-weight: 600; color: #D72638; font-size: 0.9em; text-transform: uppercase; }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #D72638;
+  color: white;
+  font-size: 14px;
+  margin-top: 50px;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeLink - FAQs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/faq.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">🩸 LifeLink</div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/donor">Donor</a>
+            <a href="/recipient">Recipient</a>
+            <a href="/search">Search</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/faq" class="active">FAQs</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="faq-hero">
+        <h1>Frequently Asked Questions</h1>
+        <p>Find quick answers about donation eligibility, the LifeLink process, and security.</p>
+    </section>
+
+    <!-- Main FAQ Content (Accordion) -->
+    <main class="faq-container">
+        
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                What is LifeLink?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+                <p>LifeLink is a platform that connects blood donors with recipients who need blood urgently. We help save lives by bridging hope and humanity — one drop at a time.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                Is LifeLink a hospital or blood bank?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+                <p>No, LifeLink is not a hospital or blood bank. It’s a digital connection system that helps you reach verified donors near you.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                Who can donate blood?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+                <p>Anyone healthy, aged 18–60, weighing at least 50 kg, and not on medication can usually donate blood. Always check with your doctor if you’re unsure.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 4-->
+        <div class="faq-item">
+            <button class="faq-question">
+                How often can I donate blood?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+                <p>You can donate whole blood every 3 months. For platelets or plasma, donation frequency may differ.</p>
+            </div>
+        </div>
+        
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                Will I get paid for donating?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+                <p>No, LifeLink promotes voluntary donation — it’s all about compassion, not compensation.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 6 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                How do I request blood on LifeLink?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+                <p>Just fill out the recipient form with your details and blood type — the system will instantly show matching donors in your area.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 7 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                What if there are no donors in my city?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+                <p>You can still submit your request — LifeLink keeps your details safe and will notify new donors as soon as they register nearby.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 8 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                Is my personal data safe?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+                <p>Absolutely. Your contact and location details are kept private and shared only with verified, relevant users when necessary.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Item 9 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                Does LifeLink charge any fees?
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+                <p>Never. LifeLink is 100% free for both donors and recipients. Saving lives should never come with a price tag.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2025 LifeLink | When no one's listening, we are ❤️</p>
+    </footer>
+
+    <script>
+        // JavaScript for the Accordion functionality
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                
+                // Toggle the active class on the question button
+                question.classList.toggle('active');
+                
+                // Toggle the 'open' class on the answer div
+                answer.classList.toggle('open');
+                
+                // Close other open answers
+                faqQuestions.forEach(otherQuestion => {
+                    if (otherQuestion !== question && otherQuestion.classList.contains('active')) {
+                        otherQuestion.classList.remove('active');
+                        otherQuestion.nextElementSibling.classList.remove('open');
+                    }
+                });
+            });
+        });
+    </script>
+ </body>
+</html>
